@@ -4,3 +4,7 @@
 <hr>
 <p><strong>Description: </strong><%= @article.description %></p>
 <hr>
+
+<%= link_to "Edit", edit_article_path(@article) %> |
+<%= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: "You sure nigga?" } %> |
+<%= link_to "Articles Page", articles_path %>
