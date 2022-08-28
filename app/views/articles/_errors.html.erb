@@ -1,8 +1,10 @@
 <% if @article.errors.any? %>
-<h2> The following errors prevented the save action. </h2>
-    <ul>
-        <% @article.errors.full_messages.each do |error| %>
-            <li><%= error %></li>
-        <% end %>
-    </ul>
+<div class="alert alert-warning" role="alert">
+    <h2> The following errors prevented the save action. </h2>
+        <ul>
+            <% @article.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+            <% end %>
+        </ul>
+</div>
 <% end %>

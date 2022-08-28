@@ -1,10 +1,14 @@
-<h1>This is article Page</h1>
+<div class="container mt-3">
+<h2 class="h2 mt-2"><%= @article.title %></h2>
 <hr>
-<p><strong>Title: </strong><%= @article.title %></p>
-<hr>
-<p><strong>Description: </strong><%= @article.description %></p>
-<hr>
+<div>
+<%= @article.description %>
+</div>
 
-<%= link_to "Edit", edit_article_path(@article) %> |
-<%= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: "You sure nigga?" } %> |
-<%= link_to "Articles Page", articles_path %>
+<div class="button-div mt-4">
+    <%= link_to "Edit", edit_article_path(@article), class: "btn btn-warning", type: "button" %> 
+    <%= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: "You sure nigga?" }, class: "btn btn-danger", type: "button" %> 
+    <%= link_to "Articles Page", articles_path, class: "btn btn-success", type: "button" %>
+</div>
+
+</div>
