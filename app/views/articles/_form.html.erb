@@ -1,7 +1,8 @@
-<%= render 'errors' %>
 
 <div class="container">
+    <%= render 'shared/errors' %>
     <div class="row justify-content-center">
+       <div>
         <div class="col-10">
             <%= form_with(model: @article, class: "shadow-sm p-3 mb-5 bg-white rounded", local: true) do |f| %>
                 <div class="form-group row mt-4">
@@ -18,12 +19,13 @@
                     </div>
                 </div>
 
-                <div class="form-group row m-2">
+                <div class="form-group text-center m-2">
                     <%= f.submit class:"btn btn-success btn-lg" %>
                 </div>
             <% end %>
         </div>
 
         <%= link_to "<- Back to Articles Page", articles_path, type: "button", class: "btn btn-primary mt-3 mb-2" %>
+       </div>
     </div>
 </div>
