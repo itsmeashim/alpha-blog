@@ -1,0 +1,53 @@
+[33mcommit 461ab7c13b46f5490639516598ee85c877be2135[m[33m ([m[1;36mHEAD -> [m[1;32mfeatures[m[33m)[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Sun Aug 28 18:07:51 2022 +0000
+
+    Making saving with downcase
+
+[33mcommit 32c2e2bcb83342f30c916416fa9b311ba6c52ec9[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Sun Aug 28 17:02:37 2022 +0000
+
+    Added Users and Articles relation
+
+[33mcommit a07d542dc3977cbc0a138b21ac657fa24ea09a3e[m[33m ([m[1;32mmaster[m[33m)[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Sun Aug 28 13:44:58 2022 +0000
+
+    Validations Added!
+
+[33mcommit 148df70c1318723dbacf892c90bf961e9a07cf82[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Sun Aug 28 13:11:03 2022 +0000
+
+    Users Model
+
+[33mcommit e98eb5726c64f19e23cb77aac9ae8ba71a3bd5b8[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Fri Aug 26 19:14:00 2022 +0000
+
+    Refactored Code
+
+[33mcommit 64a0eb4f25da148d6e184a4cd61111cad68f58bc[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Fri Aug 26 18:52:36 2022 +0000
+
+    Added: Delete option, Action links
+
+[33mcommit 11f5cfb91f6ebf01d7205a11b71a1698259e3c2f[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Fri Aug 26 18:16:44 2022 +0000
+
+    Added: Edit and Add new Article function
+
+[33mcommit 134dedec13b05366d42bf2adbda8ac4ef9760fb4[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Fri Aug 26 17:10:15 2022 +0000
+
+    Added: Articles Listing
+
+[33mcommit ca896f006b9f5a609a4320fa735a85237a512b2f[m
+Author: ItsAshim <ashimqwe1@gmail.com>
+Date:   Fri Aug 26 16:47:25 2022 +0000
+
+    Added: Show Action
