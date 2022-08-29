@@ -1,6 +1,6 @@
 <% if obj.errors.any? %>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <h2> The following errors prevented the save action. </h2>
+    <h2> The following errors prevented the <%= obj.class.name.downcase %> save action. </h2>
         <ul>
             <% obj.errors.full_messages.each do |error| %>
                 <li><%= error %></li>
