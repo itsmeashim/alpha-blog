@@ -2,6 +2,10 @@
 
 <div class="container mt-4">
     <%= render 'article' %>
+    <div class="flickr_pagination">
+        <%= will_paginate @articles, :container => false %>
+    </div>
 
-    <%= link_to 'New', new_article_path, type: "button", class: "btn btn-primary mt-3" %>
+    <%= link_to 'New', new_article_path, type: "button", class: "btn btn-primary m-3" %>
+    
 </div>
