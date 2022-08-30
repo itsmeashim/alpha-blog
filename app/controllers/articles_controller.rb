@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
     before_action :find_article, only: [:show, :edit, :update, :destroy]
+    before_action :require_user, except: [:show, :index]
+    before_action :require_same_user, only: [:edit, :update, :destroy]
 
     def show
     end
@@ -17,7 +19,7 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.new(whitelist_vars)
-        @article.user = User.first
+        @article.user = current_user
         if @article.save
             flash[:notice] = "Article Created Successfully!!"
             redirect_to @article
@@ -50,6 +52,13 @@ class ArticlesController < ApplicationController
 
     def whitelist_vars
         params.require(:article).permit(:title, :description)
+    end
+
+    def require_same_user
+        if current_user != @article.user && !current_user.admin?
+            flash[:alert] = "You can only tamper your own articles!!"
+            redirect_to @article
+        end
     end
 
 end
