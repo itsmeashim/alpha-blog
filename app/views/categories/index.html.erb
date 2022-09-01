@@ -1,0 +1,32 @@
+<h1 class="text-center mt-2">Categories</h1>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Modified</th>
+                <th>Total Articles</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody><% @categories.each do |category| %>
+            <tr>
+                <td><%= link_to category.name, category_path(category), class: "text-success fw-bold" %></td>
+                <td>Created at: <%= time_ago_in_words(category.created_at) %> & Modified at: <%= time_ago_in_words(category.updated_at) %> </td>
+                <td><%= pluralize(category.articles.count, "article") %></td>
+                <td>
+                <%= link_to 'Show', category_path(category), class: "btn btn-success", type: "button" %>
+                <% if logged_in? && current_user.admin? %>
+                    <%= link_to 'Edit', edit_category_path(category), class: "btn btn-warning", type: "button" %>
+                <% end %>
+            </td>
+            </tr>
+        </tbody><% end %>
+    </table>
+
+    <div class="flickr_pagination">
+        <%= will_paginate @categories, :container => false %>
+    </div>
+</div>

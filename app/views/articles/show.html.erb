@@ -1,6 +1,10 @@
 <div class="container mt-3">
-<h2 class="h2 mt-2"><%= @article.title %></h2>
+<h2 class="h2 mt-2 "><%= @article.title %></h2>
 <p class="font-italic">By <%= @article.user.username if @article.user %> </p>
+<% if @article.categories.any? %>
+    <%= render @article.categories %>
+<% end %>
+</br>
 <%= link_to gravatar_for(@article.user), @article.user, class: "d-inline-block" %>
 <hr>
 <div>

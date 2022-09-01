@@ -19,6 +19,13 @@
                     </div>
                 </div>
 
+                <div class="form-group row mt-3">
+                    <%= f.label :description, class: "col-2 col-form-label fw-bold" %>
+                    <div class="col-10">
+                        <%= f.collection_select(:category_ids, Category.order(:name), :id, :name, { prompt:  "Select Category If any. ( Optional and Can be Multiple) "}, { multiple: true, size: 3, class: "form-select shadow rounded"})  %>
+                    </div>
+                </div>
+
                 <div class="form-group text-center m-2">
                     <%= f.submit class:"btn btn-success btn-lg" %>
                 </div>

@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <h2 class="h2 mt-2 text-center">Category: <%= @category.name %></h2>
+    <% if logged_in? && current_user.admin? %>
+        <div class="mt-2 text-center">
+            <%= link_to "Update Category", edit_category_path(@category), class: "btn btn-primary btn-lg" %>
+        </div>
+    <% end %>
+
+    <% if @articles.any? %>
+        <h3 class="text-center mt-4">Articles</h3>
+        <%= render 'articles/article' %>
+    <% else %>
+        <h3 class="text-center fst-italic mt-5">No Articles Found for this category.</h2>
+    <% end %>
+
+    <div class="flickr_pagination m-3">
+        <%= will_paginate @articles, :container => false %>
+    </div>
+</div>
